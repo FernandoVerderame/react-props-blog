@@ -1,8 +1,12 @@
 .card {
-    width: 500px;
+    width: 600px;
     margin: 0 20px;
     border-radius: 10px;
     box-shadow: 3px 20px 62px -25px #000;
+}
+
+.notPublished {
+    display: none;
 }
 
 .image {
@@ -28,4 +32,16 @@
 
 .paragraph {
     margin: 15px 0;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.dFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
