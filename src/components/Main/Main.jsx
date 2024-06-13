@@ -7,7 +7,10 @@ const Main = () => {
     return (
         <>
             <main className={mainStyle.mainSec}>
-                <PostCard />
+                {/* Genero in modo dinamico i Posts */}
+                {posts.map(p => (
+                    <PostCard key={p.id} p={p} />
+                ))}
             </main>
         </>
     );
