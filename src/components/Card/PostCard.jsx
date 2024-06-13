@@ -1,46 +1,35 @@
-// Importo lo style della card, il Button ed il ListItem
 import postCardStyle from './PostCard.module.css';
 import Button from '../Button/Button';
 import ListItem from '../ListItem/ListItem';
 
-const PostCard = ({ p }) => {
+const PostCard = ({ title, content, image, published, tags }) => {
     return (
-        <>
-            {/* Post Card */}
-            <div className={`${postCardStyle.card} ${p.published ? 'published' : postCardStyle.notPublished}`}>
-                {/* Post Image */}
+        published && (
+            <div className={postCardStyle.card}>
                 <div className={postCardStyle.image}>
-                    <img src={p.image ? p.image : "https://placehold.co/600x400"} alt={p.title} className={postCardStyle.img} />
+                    <img src={image ? image : "https://placehold.co/600x400"} alt={title} className={postCardStyle.img} />
                 </div>
                 <div className={postCardStyle.bottom}>
-                    {/* Post Title */}
-                    <h3>{p.title}</h3>
-                    {/* Post Content */}
-                    <p className={postCardStyle.paragraph}>
-                        {p.content}
-                    </p>
+                    <h3>{title}</h3>
+                    <p className={postCardStyle.paragraph}>{content}</p>
                     <div className={postCardStyle.dFlex}>
-                        {/* Button */}
                         <Button />
-                        {p.tags.length > 0
-                            ?
+                        {tags.length > 0 ? (
                             <div>
                                 <ul className={postCardStyle.tags}>
-                                    {/* Tags */}
-                                    {p.tags.map((t) => (
-                                        // List Item
-                                        <ListItem key={t.id} t={t} />
+                                    {tags.map((tag) => (
+                                        <ListItem key={tag.id} t={tag} />
                                     ))}
                                 </ul>
                             </div>
-                            :
-                            'Nessun tag'
-                        }
+                        ) : (
+                            <p>Nessun tag</p>
+                        )}
                     </div>
                 </div>
-            </div >
-        </>
-    )
+            </div>
+        )
+    );
 }
 
 export default PostCard;

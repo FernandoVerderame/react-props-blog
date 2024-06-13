@@ -5,10 +5,6 @@
     box-shadow: 3px 20px 62px -25px #000;
 }
 
-.notPublished {
-    display: none;
-}
-
 .image {
     height: 400px;
     border-top-left-radius: 15px;
