@@ -5,7 +5,18 @@ const posts = [
         image: '',
         content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
-        tags: ["html", "css"],
+        tags: [
+            {
+                id: 1,
+                label: "html",
+                color: "#E4552E"
+            },
+            {
+                id: 2,
+                label: "css",
+                color: "#1D81C0"
+            }
+        ],
         published: true,
     },
     {
@@ -14,7 +25,18 @@ const posts = [
         image: '',
         content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
-        tags: ["js", "css"],
+        tags: [
+            {
+                id: 1,
+                label: "js",
+                color: "#FFB92C"
+            },
+            {
+                id: 2,
+                label: "css",
+                color: "#1D81C0"
+            }
+        ],
         published: true,
     },
     {
@@ -23,7 +45,18 @@ const posts = [
         image: '',
         content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
-        tags: ["js", "php"],
+        tags: [
+            {
+                id: 1,
+                label: "js",
+                color: "#FFB92C"
+            },
+            {
+                id: 2,
+                label: "php",
+                color: "#556096"
+            }
+        ],
         published: true,
     },
     {
@@ -32,7 +65,13 @@ const posts = [
         image: '',
         content:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
-        tags: ["html"],
+        tags: [
+            {
+                id: 1,
+                label: "html",
+                color: "#E4552E"
+            }
+        ],
         published: false,
     },
 ];
