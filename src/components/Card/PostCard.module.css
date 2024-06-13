@@ -36,6 +36,13 @@
     list-style: none;
 }
 
+.badge {
+    color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
 .dFlex {
     display: flex;
     justify-content: space-between;

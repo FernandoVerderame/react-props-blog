@@ -1,8 +1,15 @@
 import postCardStyle from './PostCard.module.css';
 import Button from '../Button/Button';
-import ListItem from '../ListItem/ListItem';
 
 const PostCard = ({ title, content, image, published, tags }) => {
+
+    const tagColors = {
+        html: '#E4552E',
+        css: '#1D81C0',
+        js: '#FFB92C',
+        php: '#556096'
+    };
+
     return (
         published && (
             <div className={postCardStyle.card}>
@@ -17,8 +24,8 @@ const PostCard = ({ title, content, image, published, tags }) => {
                         {tags.length > 0 ? (
                             <div>
                                 <ul className={postCardStyle.tags}>
-                                    {tags.map((tag) => (
-                                        <ListItem key={tag.id} t={tag} />
+                                    {tags.map((tag, i) => (
+                                        <li key={`tag${i}`} style={{ backgroundColor: tagColors[tag] }} className={postCardStyle.badge}>{tag}</li>
                                     ))}
                                 </ul>
                             </div>
