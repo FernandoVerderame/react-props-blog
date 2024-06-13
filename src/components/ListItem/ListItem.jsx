@@ -3,9 +3,9 @@ import listItemStyle from './ListItem.module.css';
 const ListItem = ({ t }) => {
     return (
         <>
-            <div className={listItemStyle.badge} style={{ backgroundColor: t.color }}>
+            <li className={listItemStyle.badge} style={{ backgroundColor: t.color }}>
                 {t.label}
-            </div>
+            </li>
         </>
     );
 }
