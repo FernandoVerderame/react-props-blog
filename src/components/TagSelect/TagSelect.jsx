@@ -5,13 +5,20 @@ import tagSelectStyle from './TagSelect.module.css';
 const TagSelect = () => {
 
     // Estraggo tutti i tag distinti utilizzando un Set
-    const distinctTags = [...new Set(posts.flatMap(post => post.tags))];
+    const uniqueTags = posts.reduce((acc, p) => {
+        p.tags.forEach(t => {
+            if (!acc.includes(t)) {
+                acc.push(t);
+            }
+        });
+        return acc;
+    }, []);
 
     return (
 
         <select name="tags" id="tags" className={tagSelectStyle.tagSelect}>
             <option value="">Seleziona un tag</option>
-            {distinctTags.map((tag, i) => (
+            {uniqueTags.map((tag, i) => (
                 <option key={i} value={tag}>{tag}</option>
             ))}
         </select>
