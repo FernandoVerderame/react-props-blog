@@ -1,7 +1,7 @@
 import postCardStyle from './PostCard.module.css';
 import Button from '../Button/Button';
 
-const PostCard = ({ title, content, image, published, tags }) => {
+const PostCard = ({ title, content, image, tags }) => {
 
     const tagColors = {
         html: '#E4552E',
@@ -11,7 +11,7 @@ const PostCard = ({ title, content, image, published, tags }) => {
     };
 
     return (
-        published && (
+        <>
             <div className={postCardStyle.card}>
                 <div className={postCardStyle.image}>
                     <img src={image ? image : "https://placehold.co/600x400"} alt={title} className={postCardStyle.img} />
@@ -35,7 +35,7 @@ const PostCard = ({ title, content, image, published, tags }) => {
                     </div>
                 </div>
             </div>
-        )
+        </>
     );
 }
 

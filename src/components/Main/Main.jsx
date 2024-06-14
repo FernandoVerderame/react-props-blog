@@ -9,12 +9,12 @@ const Main = () => {
             <main className={mainStyle.mainSec}>
                 {/* Genero in modo dinamico i Posts */}
                 {posts.map(p => (
+                    p.published === true &&
                     <PostCard key={p.id}
                         title={p.title}
                         image={p.image}
                         tags={p.tags}
                         content={p.content}
-                        published={p.published}
                     />
                 ))}
             </main>
